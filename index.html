@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra pamięciowa</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="start-overlay">
+        <div id="start-message">
+            <h1> Gra pamięciowa </h1>
+            <p> To wyzwanie czasowe, w którym musisz znaleźć wszystkie pasujące pary w jak najkrótszym czasie, przy jak najmniejszej liczbie kliknięć! </p>
+            <p> W górnym menu możesz wybrać zestaw klocków i poziom trudności. Możesz tam również dostosować opcje dźwięku. </p>
+            <p> Gra rozpoczyna się automatycznie po kliknięciu jednego z pól </p>
+            <div id="confirm-button">OK</div>
+        </div>
+    </div>
+    <header id="main-header">
+        <div class="controls" id="left-panel">  
+            <div id="timer"><span id="time">0</span> </div>
+            <div id="tile-select" class="button-row">
+                <p class="game-button label">POZIOM:</p>
+                <div class="game-button clickable" id="first-tileset">PTAKI</div>
+                <div class="game-button clickable" id="second-tileset">KOSMOS</div>
+                <div class="game-button clickable" id="third-tileset">ZWIERZĘTA</div>
+            </div>
+            <div id="difficulty" class="button-row">
+                <p class="game-button label">POZIOM TRUDNOŚCI:</p>
+                <div class="game-button clickable" id="easy-mode">ŁATWY</div>
+                <div class="game-button clickable" id="medium-mode">ŚREDNI</div>
+                <div class="game-button clickable" id="hard-mode">TRUDNY</div>
+            </div>
+        </div>
+        <div id="main-text">
+            <div id="title" class="animated"></div>
+        </div>
+        <div class="controls" id="right-panel">
+            <div id="music" class="button-row">
+                <p class="game-button label">AUDIO:</p>
+                <div class="game-button clickable" id="music-toggle">MUZYKA</div>
+                <div class="game-button clickable" id="sound-toggle">DŹWIĘKI</div>
+            </div>
+            <div id="start" class="game-button">RESTART</div>
+        </div>
+    </header>
+    <section id="game">
+        <div id="victory-screen">
+            <h2>WYGRANA!</h2>
+            <img id="trophy" src="images/backgrounds/trophy_remix_by_monsterbraingames.svg" alt="a trophy">
+            <div id="score-details">
+                <p class="score-text"><span id="time-score">0</span> sek.</p>
+                <p class="score-text"><span id="click-score">0</span> odkryć</p>
+            </div>
+            <div class="score-text" id="total">WYNIK: <span id="score">0</span></div>
+            <div id="stars-container">
+                <div id="star1" class="star"><img src="images/backgrounds/blackStar.svg" alt="a black star"></div>
+                <div id="star2" class="star"><img src="images/backgrounds/blackStar.svg" alt="a black star"></div>
+                <div id="star3" class="star"><img src="images/backgrounds/blackStar.svg" alt="a black star"></div>
+                <div id="star4" class="star"><img src="images/backgrounds/blackStar.svg" alt="a black star"></div>
+                <div id="star5" class="star"><img src="images/backgrounds/blackStar.svg" alt="a black star"></div>
+            </div>       
+        </div>
+        <div id="main-grid" class="four-columns">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+            <div class="box" id="box9"></div>
+            <div class="box" id="box10"></div>
+            <div class="box" id="box11"></div>
+            <div class="box" id="box12"></div>
+            <div class="box" id="box13"></div>
+            <div class="box" id="box14"></div>
+            <div class="box" id="box15"></div>
+            <div class="box" id="box16"></div>
+        </div>
+    </section>
+    <footer id="main-footer">
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
